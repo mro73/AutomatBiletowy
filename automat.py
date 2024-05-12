@@ -1,4 +1,9 @@
 import json
+import cart
+import ticket
+
+class Ticket_machine:
+    #cart = aaaaaa
 
 with open("ceny.json", "r", encoding="UTF-8") as jf:
     prices = json.load(jf)
@@ -29,7 +34,7 @@ def display_cart(cart):
 
 def register_payment(value):
     try:
-        payment_method = int(input("Wybierz metodę płatności: \n0 - gotówka\n1 - karta"))
+        payment_method = int(input("Wybierz metodę płatności: \n0 - gotówka\n1 - karta\nWybór:"))
         if payment_method:
             input("Proszę zbliżyć kartę...")
         else:
@@ -37,7 +42,7 @@ def register_payment(value):
             while (paid<value):
                 paid += int(input("Wprowadź gotówkę: "))
                 if paid > value:
-                    print(f"Reszta: {paid-total} zł")
+                    print(f"Reszta: {paid-value} zł")
     except ValueError: exit()
             
 cart = []
