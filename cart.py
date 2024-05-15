@@ -13,6 +13,7 @@ class Cart:
         print("Zawartość koszyka:")
         for index, item in enumerate(self.tickets):
             print(f"{index+1}. bilet {item[0]} \t {item[1]} zł")
+        print(f"Wartość koszyka: \t {self.value} zł")
         
     def get_value(self) -> float:
         return self.value

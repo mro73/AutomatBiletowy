@@ -3,7 +3,8 @@ import cart
 import ticket
 
 class Ticket_machine:
-    #cart = aaaaaa
+    def __init__(self) -> None:
+        cart = cart.Cart()
 
 with open("ceny.json", "r", encoding="UTF-8") as jf:
     prices = json.load(jf)
